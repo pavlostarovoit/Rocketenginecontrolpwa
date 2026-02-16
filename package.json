@@ -2,6 +2,7 @@
   {
       "name": "Rocket Engine Control PWA",
       "version": "0.1.0",
+      "homepage": "https://pavlostarovoit.github.io/Rocketenginecontrolpwa",
       "private": true,
       "dependencies": {
           "@radix-ui/react-accordion": "^1.2.3",
@@ -55,6 +56,7 @@
           "vite": "6.3.5"
       },
       "scripts": {
+          "deploy": "gh-pages -d build",
           "dev": "vite",
           "build": "vite build"
       }
