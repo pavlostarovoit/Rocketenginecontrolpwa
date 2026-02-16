@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  /* The default background color for the application. */
+  --background: rgba(247, 247, 247, 1.00);
+  /* The default color for elements or text that appears on top of the background. */
+  --foreground: rgba(0, 0, 0, 1.00);
+  /* The background color for cards, modals, and other containers. */
+  --card: rgba(255, 255, 255, 1.00);
+  /* The default color for text or elements that appear on top of cards, modals and other background containers. */
+  --card-foreground: rgba(0, 0, 0, 1.00);
+  /* The default background color for dropdowns and tooltips. */
+  --popover: rgba(255, 255, 255, 1.00);
+  /* The default color for text or elements that appear on top of dropdowns and tooltips. */
+  --popover-foreground: rgba(0, 0, 0, 1.00);
+  /* The primary color used for buttons, links, and other interactive elements. */
+  --primary: rgba(0, 0, 0, 1.00);
+  /* The default color for text or elements that appear on top of primary colored elements. */
+  --primary-foreground: rgba(255, 255, 255, 1.00);
+  /* The secondary color used for secondary(but NOT-DESTRUCTIVE) buttons and interactive elements. */
+  --secondary: rgba(0, 0, 0, 0);
+  /* The default color for text or elements that appear on top of secondary colored elements. */
+  --secondary-foreground: rgba(0, 0, 0, 1.00);
+  /* The muted color used for less prominent elements, such as disabled buttons or disabled text. */
+  --muted: rgba(119, 119, 119, 1.00);
+  /* The default color for text or elements that appear on top of muted colored elements. */
+  --muted-foreground: rgba(239, 239, 239, 1.00);
+  /* The accent color used for highlights, links, and other interactive elements. */
+  --accent: rgba(10, 100, 235, 1.00);
+  /* The default color for text or elements that appear on top of accent colored elements. */
+  --accent-foreground: rgba(255, 255, 255, 1.00);
+  /* The color used for background in destructive actions, such as delete buttons or error messages. */
+  --destructive: rgba(193, 50, 17, 1.00);
+  /* The default color for text or elements that appear on top of destructive colored elements. */
+  --destructive-foreground: rgba(255, 255, 255, 1.00);
+  /* The default border color for elements such as inputs, buttons, and other containers. */
+  --border: rgba(239, 239, 239, 1.00);
+  /* The default background color for input fields once the text has been filled. Should be either transparent or match the input-background. */
+  --input: rgba(239, 239, 239, 1.00);
+  /* The default background color for input fields, text areas, and other input elements. */
+  --input-background: rgba(239, 239, 239, 1.00);
+  /* The default font weight for medium text. */
+  --font-weight-medium: 500;
+  /* The default font weight for normal text. */
+  --font-weight-normal: 400;
+  /* The default font weight for light text. */
+  --font-weight-light: 300;
+  /* The color for focus rings, outlines, and other focus indicators. */
+  --ring: rgba(0, 0, 0, 1.00);
+  /* Shadow for small elevations, such as cards or modals. */
+  --elevation-sm: 0px -1px 8px 0px rgba(42, 42, 42, 0.08);
+  /* The color for chart elements, such as a bar or line in a chart. */
+  --chart-1: rgba(10, 100, 235, 1.00);
+  /* The color for another chart element, such as a bar or line in a chart. */
+  --chart-2: rgba(67, 67, 67, 1.00);
+  /* The color for another chart element, such as a bar or line in a chart. */
+  --chart-3: rgba(119, 119, 119, 1.00);
+  /* The color for another chart element, such as a bar or line in a chart. */
+  --chart-4: rgba(193, 50, 17, 1.00);
+  /* The color for another chart element, such as a bar or line in a chart. */
+  --chart-5: rgba(13, 136, 31, 1.00);
+  /* The default border radius for elements such as buttons, tooltip, and other containers. */
+  --radius: 4px;
+  /* The background color for sidebars, navigation menus, and other persistent elements. */
+  --sidebar: rgba(0, 0, 0, 0);
+  /* The default color for text or elements that appear on top of sidebars, navigation menus, and other persistent elements. */
+  --sidebar-foreground: rgba(0, 0, 0, 1.00);
+  /* The primary color used for buttons, links, and other interactive elements in sidebars and navigation menus. */
+  --sidebar-primary: rgba(0, 0, 0, 1.00);
+  /* The default color for text or elements that appear on top of primary colored elements in sidebars and navigation menus. */
+  --sidebar-primary-foreground: rgba(255, 255, 255, 1.00);
+  /* The accent color used for highlights, links, and other interactive elements in sidebars and navigation menus. */
+  --sidebar-accent: rgba(10, 100, 235, 1.00);
+  /* The default color for text or elements that appear on top of accent colored elements in sidebars and navigation menus. */
+  --sidebar-accent-foreground: rgba(255, 255, 255, 1.00);
+  /* The default border color for elements in sidebars and navigation menus. */
+  --sidebar-border: rgba(0, 0, 0, 1.00);
+  /* The default color for focus rings, outlines, and other focus indicators in sidebars and navigation menus. */
+  --sidebar-ring: rgba(0, 0, 0, 1.00);
+  /* The color for success states and messages. */
+  --success: rgba(13, 136, 31, 1.00);
+  /* The default color for text or elements that appear on top of success colored elements. */
+  --success-foreground: rgba(255, 255, 255, 1.00);
+  /* The color for error states and messages. */
+  --error: rgba(227, 43, 0, 1.00);
+  /* The default color for text or elements that appear on top of error colored elements. */
+  --error-foreground: rgba(255, 255, 255, 1.00);
+  /* The color for warning states and messages - used for low refresh rate indicators */
+  --warning: rgba(213, 128, 0, 1.00);
+  /* The default color for text or elements that appear on top of warning colored elements. */
+  --warning-foreground: rgba(255, 255, 255, 1.00);
+  
+  /* Design system specific colors from Figma */
+  /* Secondary text and icon color - used for labels, units, secondary information */
+  --text-secondary: rgba(84, 84, 84, 1.00);
+  /* Light border and divider color - used for borders, guide lines, separators */
+  --border-light: rgba(239, 239, 239, 1.00);
+  /* Disabled background color - used for inactive parameter blocks */
+  --bg-disabled: rgba(247, 247, 247, 1.00);
+  
+  /* Typography size and line-height variables based on IBM Plex Sans specifications */
+  /* H0 Title - 18px/24px */
+  --text-h0-size: 18px;
+  --text-h0-line-height: 24px;
+  
+  /* H1 Title - 16px/24px */
+  --text-h1-size: 16px;
+  --text-h1-line-height: 24px;
+  
+  /* H2 Title/Text/Subtext - 15px/20px */
+  --text-h2-size: 15px;
+  --text-h2-line-height: 20px;
+  
+  /* H3 Title/Text - 14px/16px */
+  --text-h3-size: 14px;
+  --text-h3-line-height: 16px;
+  
+  /* H4 Title/Text - 13px/16px */
+  --text-h4-size: 13px;
+  --text-h4-line-height: 16px;
+  
+  /* Legacy variables for backwards compatibility */
+  --text-2xl: 24px;
+  --text-xl: 16px;
+  --text-lg: 14px;
+  --text-base: 13px;
+  --text-sm: 12px;
+}
+
+.dark {
+  --background: rgba(0, 0, 0, 1.00);
+  --foreground: rgba(255, 255, 255, 1.00);
+  --card: rgba(0, 0, 0, 1.00);
+  --card-foreground: rgba(255, 255, 255, 1.00);
+  --popover: rgba(0, 0, 0, 1.00);
+  --popover-foreground: rgba(255, 255, 255, 1.00);
+  --primary: rgba(255, 255, 255, 1.00);
+  --primary-foreground: rgba(0, 0, 0, 1.00);
+  --secondary: rgba(255, 255, 255, 0.1);
+  --secondary-foreground: rgba(255, 255, 255, 1.00);
+  --muted: rgba(119, 119, 119, 1.00);
+  --muted-foreground: rgba(239, 239, 239, 1.00);
+  --accent: rgba(10, 100, 235, 1.00);
+  --accent-foreground: rgba(255, 255, 255, 1.00);
+  --destructive: rgba(193, 50, 17, 1.00);
+  --destructive-foreground: rgba(255, 255, 255, 1.00);
+  --border: rgba(255, 255, 255, 1.00);
+  --input: rgba(119, 119, 119, 1.00);
+  --ring: rgba(255, 255, 255, 1.00);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --font-weight-light: 300;
+  --chart-1: rgba(10, 100, 235, 1.00);
+  --chart-2: rgba(67, 67, 67, 1.00);
+  --chart-3: rgba(119, 119, 119, 1.00);
+  --chart-4: rgba(193, 50, 17, 1.00);
+  --chart-5: rgba(13, 136, 31, 1.00);
+  --sidebar: rgba(0, 0, 0, 0);
+  --sidebar-foreground: rgba(255, 255, 255, 1.00);
+  --sidebar-primary: rgba(255, 255, 255, 1.00);
+  --sidebar-primary-foreground: rgba(0, 0, 0, 1.00);
+  --sidebar-accent: rgba(10, 100, 235, 1.00);
+  --sidebar-accent-foreground: rgba(255, 255, 255, 1.00);
+  --sidebar-border: rgba(255, 255, 255, 1.00);
+  --sidebar-ring: rgba(255, 255, 255, 1.00);
+  --success: rgba(13, 136, 31, 1.00);
+  --success-foreground: rgba(255, 255, 255, 1.00);
+  --error: rgba(227, 43, 0, 1.00);
+  --error-foreground: rgba(255, 255, 255, 1.00);
+  --warning: rgba(213, 128, 0, 1.00);
+  --warning-foreground: rgba(255, 255, 255, 1.00);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-error: var(--error);
+  --color-error-foreground: var(--error-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-text-secondary: var(--text-secondary);
+  --color-border-light: var(--border-light);
+  --color-bg-disabled: var(--bg-disabled);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+}
+
+/**
+ * Base typography using IBM Plex Sans. This is not applied to elements which have an ancestor with a Tailwind text class.
+ * Typography specifications:
+ * H0 Title - IBM Plex Sans Medium 18/24
+ * H1 Title - IBM Plex Sans Medium 16/24
+ * H2 Title - IBM Plex Sans Medium 15/20
+ * H2 Text - IBM Plex Sans Regular 15/20
+ * H2 Subtext - IBM Plex Sans Light 15/20
+ * H3 Title - IBM Plex Sans Medium 14/16
+ * H3 Text - IBM Plex Sans Regular 14/16
+ * H4 Title - IBM Plex Sans Medium 13/16
+ * H4 Text - IBM Plex Sans Regular 13/16
+ * Link - IBM Plex Sans Medium 15/20 (underline)
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: var(--text-h1-size);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--text-h1-line-height);
+    }
+
+    h2 {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: var(--text-h2-size);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--text-h2-line-height);
+    }
+
+    h3 {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: var(--text-h3-size);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--text-h3-line-height);
+    }
+
+    h4 {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: var(--text-h4-size);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--text-h4-line-height);
+    }
+
+    p {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: var(--text-h2-size);
+      font-weight: var(--font-weight-normal);
+      line-height: var(--text-h2-line-height);
+    }
+
+    label {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: var(--text-h4-size);
+      font-weight: var(--font-weight-normal);
+      line-height: var(--text-h4-line-height);
+    }
+
+    button {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: var(--text-h2-size);
+      font-weight: var(--font-weight-normal);
+      line-height: var(--text-h2-line-height);
+    }
+
+    input {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: var(--text-h2-size);
+      font-weight: var(--font-weight-normal);
+      line-height: var(--text-h2-line-height);
+    }
+
+    .description {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: var(--text-h2-size);
+      font-weight: var(--font-weight-light);
+      line-height: var(--text-h2-line-height);
+    }
+
+    .link, a {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: var(--text-h2-size);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--text-h2-line-height);
+      text-decoration: underline;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
